@@ -1,0 +1,22 @@
+== README
+
+This is a very simple app to render in a simple HTML page:
+
+* "Fizz" if the number is multiple of 3
+* "Buzz" if the number is multiple of 5
+* "FizzBuzz" if the number is multiple of 3 AND multiple of 5
+* The number itself in any other case.
+
+== Requirements
+
+Ruby on Rails 4.2.4
+
+== Usage
+
+In the root directory run
+
+ $ bundle
+ $ rails s
+
+After that open in your browser http://localhost:3000
+
