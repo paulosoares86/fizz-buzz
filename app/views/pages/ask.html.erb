@@ -1,18 +1,15 @@
-<div class="container">
 
-  <h2 class="page-title">Enter a number to discover its sound</h2>
+<h2 class="page-title">Enter a number to discover its sound</h2>
 
-  <%= form_tag pages_resp_path do %>
+<%= form_tag pages_resp_path do %>
 
-    <div class="row">
-      <div class="input-field col s12">
-        <input placeholder="Number" name="num" id="num" type="number" class="validate">
-      </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <input placeholder="Number" name="num" id="num" type="number" class="validate">
     </div>
+  </div>
 
-    <br>
-    <%= submit_tag("Submit", class: "waves-effect waves-light btn") %>
+  <br>
+  <%= submit_tag("Submit", class: "waves-effect waves-light btn") %>
 
-  <% end %>
-
-</div>
+<% end %>
