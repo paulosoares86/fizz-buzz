@@ -86,6 +86,20 @@ RSpec.feature "Pages", type: :feature do
     expect(page).to have_text("is FizzBuzz")
   end
 
+  scenario "User enters 15.1" do
+    visit "/"
+    fill_in "num", with: '15.1'
+    click_button "Submit"
+    expect(page).to have_text("an invalid number")
+  end
+
+  scenario "User enters 15,1" do
+    visit "/"
+    fill_in "num", with: '15,1'
+    click_button "Submit"
+    expect(page).to have_text("an invalid number")
+  end
+
   scenario "User enters 151234567890098765432345678765432" do
     visit "/"
     fill_in "num", with: '151234567890098765432345678765433'
