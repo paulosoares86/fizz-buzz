@@ -9,7 +9,7 @@ This is a very simple app to render in a simple HTML page:
 
 == Requirements
 
-Ruby on Rails 4.2.4
+Ruby on Rails 4.2.1
 
 == Usage
 
@@ -19,4 +19,3 @@ In the root directory run
  $ rails s
 
 After that open in your browser http://localhost:3000
-
