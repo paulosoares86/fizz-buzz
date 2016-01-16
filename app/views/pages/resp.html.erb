@@ -1,6 +1,10 @@
 <div class="container">
 
-  <h2 class="page-title">The sound of <%= @num %> is <%= @sound %></h2>
+  <% if @error %>
+    <h2 class="page-title red-text"><%= @error %></h2>
+  <% else %>
+    <h2 class="page-title">The sound of <%= @num %> is <%= @sound %></h2>
+  <% end %>
 
   <a href="/"><button class="waves-effect waves-light btn" name="button">Back</button></a>
 

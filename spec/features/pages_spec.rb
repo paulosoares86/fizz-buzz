@@ -5,7 +5,7 @@ RSpec.feature "Pages", type: :feature do
     visit "/"
     fill_in "num", with: ''
     click_button "Submit"
-    expect(page).to have_text("Invalid number.")
+    expect(page).to have_text("an invalid number.")
   end
 
   scenario "Go back link must work" do
@@ -20,28 +20,28 @@ RSpec.feature "Pages", type: :feature do
     visit "/"
     fill_in "num", with: '12asd'
     click_button "Submit"
-    expect(page).to have_text("Invalid number.")
+    expect(page).to have_text("an invalid number.")
   end
 
   scenario "User enters a string that ends with numbers" do
     visit "/"
     fill_in "num", with: 'asd12'
     click_button "Submit"
-    expect(page).to have_text("Invalid number.")
+    expect(page).to have_text("an invalid number.")
   end
 
   scenario "User enters a string that does not contains numbers" do
     visit "/"
     fill_in "num", with: 'asd'
     click_button "Submit"
-    expect(page).to have_text("Invalid number.")
+    expect(page).to have_text("an invalid number.")
   end
 
   scenario "User enters a string that does not contains numbers" do
     visit "/"
     fill_in "num", with: 'asd'
     click_button "Submit"
-    expect(page).to have_text("Invalid number.")
+    expect(page).to have_text("an invalid number.")
   end
 
   scenario "User enters 0" do
@@ -72,10 +72,16 @@ RSpec.feature "Pages", type: :feature do
     expect(page).to have_text("is Buzz")
   end
 
-
   scenario "User enters 15" do
     visit "/"
     fill_in "num", with: '15'
+    click_button "Submit"
+    expect(page).to have_text("is FizzBuzz")
+  end
+
+  scenario "User enters -15" do
+    visit "/"
+    fill_in "num", with: '-15'
     click_button "Submit"
     expect(page).to have_text("is FizzBuzz")
   end

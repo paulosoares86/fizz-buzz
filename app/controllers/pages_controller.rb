@@ -4,7 +4,11 @@ class PagesController < ApplicationController
 
   def resp
     @num = pages_params[:num]
-    @sound = @num =~ /\A\d+\Z/ ? sound(@num) : "Invalid number."
+    if @num =~ /\A-?\d+\Z/
+      @sound = sound(@num)
+    else
+      @error = "You have provided an invalid number."
+    end
   end
 
   private
