@@ -1,11 +1,19 @@
-<h1>Enter a number to discover its sound</h1>
+<div class="container">
 
-<%= form_tag pages_resp_path, method: :post do %>
-  <div class="">
-    <label for="num">Number</label>
-    <input type="number" name="num" value=""/>
-  </div>
+  <h2 class="page-title">Enter a number to discover its sound</h2>
 
-  <br>
-  <button type="submit" name="name" value="">Submit</button>
-<% end %>
+  <%= form_tag pages_resp_path do %>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <input name="num" id="num" type="number" class="validate">
+        <label for="num">Number</label>
+      </div>
+    </div>
+
+    <br>
+    <%= submit_tag("Submit", class: "waves-effect waves-light btn") %>
+
+  <% end %>
+
+</div>
